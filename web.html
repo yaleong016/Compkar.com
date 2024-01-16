@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+
+</head>
+<header>
+    <img src="compkar.png" alt="comparaison">
+    <h1 class="header-title">COMPKAR.COM</h1>
+</header>
+<form>
+    <label for="abonnement">Abonnement Citiez?</label>
+    <input type="checkbox" name="abonnement" id="abonnement" value="me">
+</form>
+
+<form>
+    <label for="aller">Aller-Retour?</label>
+    <input type="checkbox" name="aller" id="aller" value="me">
+</form>
+
+<form>
+    <label for="rang">Pour cent de Kilomètres et d'Heures en plus:</label>
+    <input type="range" min="0" max="100" name="rang" id="rang" value="me">
+    <p>Value: <span id="rangeValue"></span></p>
+</form>
+<pre onclick="toggleCarSizeForm()">Clik pour choisir la Taille de la voiture:</pre>
+<form id="carSizeForm" class="hidden-form">
+    <!-- Radio buttons for car sizes -->
+    <label class="radio-label">
+        <input type="radio" name="car-size" class="radio-input" value="S">
+        <span class="custom-radio"></span> Small (S)
+    </label>
+
+    <label class="radio-label">
+        <input type="radio" name="car-size" class="radio-input" value="M">
+        <span class="custom-radio"></span> Medium (M)
+    </label>
+
+    <label class="radio-label">
+        <input type="radio" name="car-size" class="radio-input" value="L">
+        <span class="custom-radio"></span> Large (L)
+    </label>
+
+    <label class="radio-label">
+        <input type="radio" name="car-size" class="radio-input" value="XL">
+        <span class="custom-radio"></span> Extra Large (XL)
+    </label>
+
+    <label class="radio-label">
+        <input type="radio" name="car-size" class="radio-input" value="XXL">
+        <span class="custom-radio"></span> Double Extra Large (XXL)
+    </label>
+</form>
+<br>
+<form>
+    <h4>Veuillez saisir le kilo/l'heure, ou les trouver en utilisant la carte</h4>
+</form>
+<br>
+<form>
+    <label for="kilo">Le Kilometres</label>
+    <input type="number" name="abonnement" id="kilo">
+</form>
+
+<form>
+    <label for="heure">L'heure</label>
+    <input type="number" name="aller" id="heure">
+</form>
+
+
+
+<div id="mainContainer" class="container">
+    <div id="legendContainer">
+        <div id="legend"></div>
+    </div>
+    <div id="map"></div>
+</div>
+
+<div id="controls">
+    <button id="button1" onclick="calculerResultat()">Calculer</button>
+    <button id="button2">Reset</button>
+</div>
+<div id="text"></div>
+
+<body>
+<title>Line Chart</title>
+<br>
+<br>
+<div id = "chartContainer">
+    <div id="lineChart"></div>
+</div>
+<br>
+<br>
+<script src="https://d3js.org/d3.v6.js"></script>
+<script src = "graph.js" type = "module"> </script>
+</body>
+
+
+
+<body>
+<br>
+<br>
+<!-- Create a div where the graph will take place -->
+<title>heat Chart</title>
+<script src="https://d3js.org/d3.v6.js"></script>
+<div id="HeatMapContainer">
+    <div id="HeatMap"></div>
+</div>
+<script src = "heatMap.js" type = "module"> </script>
+</body>
+
+
+<footer>
+    <div class="footer-content">
+        <p class="site-name">COMPKAR.COM</p>
+    </div>
+    <div class="social-icons">
+        <img src="fb.jpg" alt="Logo Facebook">
+        <img src="Instagram.png" alt="Logo Instagram">
+        <img src="twitter.png" alt="Logo Twitter">
+    </div>
+    <div class="language">
+        <p>Langue: Français</p>
+    </div>
+</footer>
+
+<script src="main.js" type = "module"></script>
+
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+<script>
+    function toggleCarSizeForm() {
+        var carSizeForm = document.getElementById("carSizeForm");
+        carSizeForm.classList.toggle("hidden-form");
+    }
+</script>
+</html>

@@ -1,0 +1,126 @@
+body {
+    background-color: rgba(255, 102, 102, 0.5); /* Noir avec une opacité de 0.5 pour plus de transparence */
+    /*color: white; !* Couleur du texte en blanc *!*/
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 153, 0.8); /* Couleur du header plus foncée */
+    color: white; /* Changez la couleur du texte selon vos préférences */
+}
+pre {
+    cursor: pointer;
+}
+
+#carSizeForm.hidden-form {
+    display: none;
+}
+
+footer {
+    background-color: rgba(255, 255, 153, 0.8); /* Couleur du footer plus foncée */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Le reste de votre code CSS reste inchangé ci-dessous */
+h1 {
+    border-style: solid;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+#map {
+    height: 300px;
+    width: 700px;
+    border-radius: 20px;
+    padding: 50px;
+    margin: 50px auto;
+}
+#HeatMapContainer {
+    background-color: rgba(255, 255, 204, 0.8);
+    padding: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid; /* Optional: Adding a border for visual distinction */
+    margin: 50px auto; /* Centers the container horizontally */
+    width: 70%; /* Adjust the width as needed */
+    height: 70%; /* Adjust the height as needed */
+    border-radius: 20px;
+}
+#chartContainer {
+    background-color: rgba(255, 255, 204, 0.8);
+    padding: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid; /* Optional: Adding a border for visual distinction */
+    margin: 50px auto; /* Centers the container horizontally */
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+form {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header img {
+    max-width: 80px;
+    margin-right: 20px;
+}
+
+header h1 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.header-title {
+    font-size: 24px;
+    border: none;
+    font-style: italic;
+    color: #2b90a8;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #2b90a8;
+}
+
+.site-name {
+    margin: 0;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+.language {
+    float: right;
+}
+
+#mainContainer {
+    display: flex;
+    align-items: stretch;
+    height: 100vh; /* Make sure the container takes up the full viewport height */
+}
+
+#legendContainer {
+    background-color: rgba(255, 255, 204, 0.8);
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    padding: 50px;
+    margin: 50px auto;
+    border: 1px solid; /* Optional: Adding a border for visual distinction */
+    flex: 1; /* Allow the heatmap container to grow and fill available space */
+}
+
+
