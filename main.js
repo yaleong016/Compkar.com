@@ -157,18 +157,18 @@ function creer () {
             const prixHertz = calcHertz(formData);
             lineGraph (formData, tup.at(0), tup.at(1));
             creerHeat(formData);
-            text.innerText = "La distance à sens unique est: " + km + " km";
-            text.innerText += "\nLe temps à sens unique est: " + temps + " Heures";
-            text.innerText += "\nLe distance total est: " + tup.at(1) + " km";
-            text.innerText += "\nLe temps total est: " + tup.at(0) + " Heures";
-            text.innerText += "\nLe prix pour Citiez est: €" + prixCitiez;
-            text.innerText += "\nLe prix pour Hertz est: €" + prixHertz;
+            text.innerText = "La distance à sens unique est: " + km.toFixed(2) + " km";
+            text.innerText += "\nLe temps à sens unique est: " + temps.toFixed(2) + " Heures";
+            text.innerText += "\nLe distance total est: " + tup.at(1).toFixed(2) + " km";
+            text.innerText += "\nLe temps total est: " + tup.at(0).toFixed(2) + " Heures";
+            text.innerText += "\nLe prix pour Citiez est: €" + prixCitiez.toFixed(2);
+            text.innerText += "\nLe prix pour Hertz est: €" + prixHertz.toFixed(2);
             if (tup.at(0) / 24 <= 14 || tup.at(1) <= 1500) {
                 formData.kilo = tup.at(1);
                 formData.heures = tup.at(0);
                 lineLeo(formData);
                 const prixLeo = calculerLeo(formData);
-                text.innerText += "\nLe prix pour Leo&Go est: €" + prixLeo;
+                text.innerText += "\nLe prix pour Leo&Go est: €" + prixLeo.toFixed(2);
             }
             else {
                 text.innerText += text.innerText + "\nLe prix n'existe pas pour Leo&Go car l'heures ou/et le kilo est trop";
